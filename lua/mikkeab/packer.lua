@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   }
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+  use('nvim-treesitter/playground')
   use('tpope/vim-fugitive')
 
   use {
@@ -32,8 +33,11 @@ return require('packer').startup(function(use)
     {'neovim/nvim-lspconfig'},
     -- Autocompletion
     {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'saadparwaiz1/cmp_luasnip'},
     {'hrsh7th/cmp-nvim-lsp'},
-    {'L3MON4D3/LuaSnip'},
-  }
+    {'hrsh7th/cmp-nvim-lua'},
+}
 }
 end)
